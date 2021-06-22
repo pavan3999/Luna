@@ -1,0 +1,12 @@
+{
+    "name": "Luna",
+    "site": "luna.orchard.studio",
+    "enableBeta": true,
+    "minimumVersion": 1.0,
+    "latestVersion": 1.0,
+    "latestNotes" : "",
+    "latestLink": "https://luna.orchard.studio/download/luna-1.0.apk",
+    "blackList":[{
+        "bookName": "Test"
+    }]
+}
