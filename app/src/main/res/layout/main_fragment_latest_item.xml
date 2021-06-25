@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:elevation="0dp"
+    android:clickable="true"
+    android:focusable="true">
+    <TextView
+        android:id="@+id/main_latest_title"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="165dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:text="妹与日"
+        android:textSize="14dp"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:id="@+id/main_latest_title_new"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="185dp"
+        android:gravity="center_horizontal"
+        android:text="妹与日1"
+        android:textSize="11dp"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <ImageView
+        android:id="@+id/main_latest_cover"
+        android:layout_width="105dp"
+        android:layout_height="140dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/cover"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:scaleType="centerCrop" />
+</FrameLayout>

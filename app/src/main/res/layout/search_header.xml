@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/search_header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:clickable="true"
+    android:focusable="true">
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:contentPaddingTop="10dp"
+        app:contentPaddingBottom="10dp"
+        app:contentPaddingLeft="20dp"
+        app:contentPaddingRight="20dp"
+        app:cardBackgroundColor="@color/color_accent"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp">
+        <TextView
+            android:id="@+id/search_header_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="搜 / 索"
+            android:textColor="@color/color_text_white"
+            android:textSize="18dp"/>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

@@ -1,0 +1,16 @@
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_latest_swipe_refresh_widget"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_latest_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarSize="2dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbarThumbHorizontal="@color/color_accent"
+        android:scrollbarThumbVertical="@color/color_accent"
+        android:scrollbars="vertical"
+        android:overScrollMode="never"/>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

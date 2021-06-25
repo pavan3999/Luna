@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_bookshelf_header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:clickable="true"
+    android:focusable="true">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="10dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/color_accent"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp">
+        <TextView
+            android:id="@+id/main_bookshelf_header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_gravity="center_vertical"
+            android:text="我 / 的 / 书 / 架"
+            android:textColor="@color/color_text_white"
+            android:textSize="18dp"/>
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_marginEnd="75dp"
+            android:background="@color/color_accent_light" />
+        <TextView
+            android:id="@+id/main_bookshelf_header_checkupdate"
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="检查更新"
+            android:textColor="@color/color_text_white"
+            android:textSize="12dp"/>
+
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

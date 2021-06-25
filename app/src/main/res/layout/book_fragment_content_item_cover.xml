@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_gravity="center_horizontal"
+    android:elevation="0dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_marginTop="10dp"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/book_content_img_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:background="#66FFFFFF"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/book_content_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="下载本卷"
+            android:textColor="@color/color_text_black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/book_content_chapter_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="80dp"
+
+            android:layout_marginBottom="15dp"
+            android:maxLines="1"
+            android:textColor="@color/color_text_black"
+
+            android:textSize="18sp"
+            android:textStyle="normal|bold" />
+    </FrameLayout>
+
+
+</FrameLayout>

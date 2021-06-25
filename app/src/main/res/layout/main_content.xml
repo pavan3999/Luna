@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_primary"
+    tools:context=".MainActivity.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/main_content_targetview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/main_content_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"/>
+    </FrameLayout>
+
+    <studio.orchard.blurview.BlurView
+        android:id="@+id/main_content_blurview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="top" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/main_content_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:fitsSystemWindows="true"
+        app:elevation="0dp"><!-- 去除阴影-->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/main_content_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:theme="@style/ToolbarCustomStyle"
+            app:titleTextAppearance="@style/ToolbarTitleSize">
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/main_content_tablayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:fitsSystemWindows="false"
+                app:tabBackground="@android:color/transparent"
+                app:tabGravity="center"
+                app:tabIndicatorColor="@color/color_accent_light"
+                app:tabIndicatorFullWidth="false"
+                app:tabMinWidth="50dp"
+                app:tabMode="fixed"
+                app:tabIndicatorHeight="2dp"
+                app:tabUnboundedRipple="true"
+                app:tabSelectedTextColor="@color/color_accent"
+                app:tabTextAppearance="@style/TablayoutTextSize"
+                app:tabTextColor="@color/color_text_dark" />
+        </androidx.appcompat.widget.Toolbar>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#4D5A5A5A" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
