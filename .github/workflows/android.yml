@@ -14,7 +14,7 @@ on:
 jobs:
   build:
     name: Build app
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Clone repo
@@ -28,10 +28,11 @@ jobs:
         with:
           java-version: 11
 
-      - name: Build APK
-        uses: gradle/gradle-command-action@v2
-        with:
-          arguments: assembleStandardRelease
+      - name: Get NDK 
+        run: sudo ${ANDROID_HOME}/tools/bin/sdkmanager --install "ndk;21.0.6113669"
+
+      - name: Build Release APK
+        run: bash ./gradlew assembleStandardRelease --stacktrace
 
       - name: Sign APK          
         uses: r0adkll/sign-android-release@v1
