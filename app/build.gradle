@@ -16,15 +16,6 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    signingConfigs {
-        release {
-            keyAlias 'Luna'
-            keyPassword 'yaMA4T#EEza3uG'
-            storeFile file('../../keystore/luna.jks')
-            storePassword 'yaMA4T#EEza3uG'
-        }
-    }
-
     buildTypes {
         release {
             minifyEnabled true
