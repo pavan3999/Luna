@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  # Manual triggers
+  workflow_dispatch:
+    inputs:
+      git-ref:
+        description: Git Ref (Optional)
+        required: false
+      dry-run:
+        description: Creates a draft release
+        required: false
+
+jobs:
+  build:
+    name: Build app
+    runs-on: ubuntu-18.04
+
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v2
+
+      - name: Validate Gradle Wrapper
+        uses: gradle/wrapper-validation-action@v1
+
+      - name: Set up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+
+      - name: Build APK
+        uses: gradle/gradle-command-action@v2
+        with:
+          arguments: assembleStandardRelease
+
+      - name: Sign APK          
+        uses: r0adkll/sign-android-release@v1
+        with:
+          releaseDirectory: app/build/outputs/apk/standard/release
+          signingKeyBase64: ${{ secrets.SIGNING_KEY }}
+          alias: ${{ secrets.ALIAS }}
+          keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
+          keyPassword: ${{ secrets.KEY_PASSWORD }}
+
+      - name: Create Release
+        uses: actions/upload-artifact@v2
+        with:
+          name: luna
+          path: ${{ env.SIGNED_RELEASE_FILE }}
+
+      - name: Download Artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: luna         
