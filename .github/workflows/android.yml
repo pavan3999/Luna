@@ -32,12 +32,12 @@ jobs:
         run: sudo ${ANDROID_HOME}/tools/bin/sdkmanager --install "ndk;21.0.6113669"
 
       - name: Build Release APK
-        run: bash ./gradlew assembleStandardRelease --stacktrace
+        run: bash ./gradlew assembleRelease --stacktrace
 
       - name: Sign APK          
         uses: r0adkll/sign-android-release@v1
         with:
-          releaseDirectory: app/build/outputs/apk/standard/release
+          releaseDirectory: app/build/outputs/apk/release
           signingKeyBase64: ${{ secrets.SIGNING_KEY }}
           alias: ${{ secrets.ALIAS }}
           keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
